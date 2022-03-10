@@ -19,17 +19,19 @@ Collaborate on the spreadsheet of source data.
 
 ## Related projects
 
-### Pokemon names
-
-- [Pokemon Database: Etymology](https://pokemondb.net/etymology)
-- [Serebii foreign names](https://www.serebii.net/pokedex-bw/foreign.shtml)
-
-### Accessible Pokemon data
+### Pokemon APIs
 
 - [Veekun Pokedex](https://github.com/veekun/pokedex)
 - [PokeAPI](https://pokeapi.co/)
 
-### General Pokemon data analysis
+### Pokemon etymology (name) data
+
+- [Pokemon Database: Etymology](https://pokemondb.net/etymology)
+- [Serebii foreign names](https://www.serebii.net/pokedex-bw/foreign.shtml)
+- [Bulbapedia name origins](https://bulbapedia.bulbagarden.net/wiki/Abomasnow_%28Pok%C3%A9mon%29#Name_origin)
+
+### Pokemon numerical data analysis
 
 - [GottaAnalyseThemAll](https://public.tableau.com/app/profile/julien.marmiesse/viz/Pokemon-GottaAnalyseThemAll/Pokemon-GottaAnalyseThemAll)
 - [pokebattler-fight data](https://github.com/celandro/pokebattler-fight/tree/master/src/main/resources/com/pokebattler/fight/data)
+- [Pokemon Data Analysis](https://medium.com/codex/pok%C3%A9mon-data-analysis-372a095b65ae)
