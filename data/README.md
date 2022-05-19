@@ -33,5 +33,5 @@ Extract wikitext content
 
 ### Wikitext processing
 
-    See `scripts/parse_wikitext.py` which uses [wikitextparser](https://github.com/5j9/wikitextparser)
+    See `scripts/parse_wikitext.py` which uses [mwparserfromhell](https://github.com/earwig/mwparserfromhell)
 
