@@ -17,14 +17,21 @@ Original data is downloaded from the internet and stored here unmodified.
 
     python -m venv test1-env # optional
     source test1-env/bin/activate # optional
-    pip install yq --ignore-installed PyYAML
+    pip install yq --ignore-installed PyYAML # yq package includes xq command
+
+    cat data/original/Bulbapedia-Gen-I-Sample.xml | xq '.' > data/processed/bulbapedia_gen_i_sample.json
 
 ### JSON processing
 
-    cat original/Bulbapedia-Gen-I-Sample.xml | xq '.' > processed/bulbapedia_gen_i_sample.json
-    cat processed/bulbapedia_gen_i_sample.json | jq '.mediawiki.page | .[] | { id: .id, name: .title, origin: .revision.text."#text" }' > processed/processed/bulbapedia_gen_i_sample_slightly_simpler.json
+Extract all relevant fields
 
-### Text processing
+    cat data/processed/bulbapedia_gen_i_sample.json | jq -r '.mediawiki.page | .[] | { id: .id, name: .title, content: .revision.text."#text" }' > data/processed/bulbapedia_gen_i_sample_reduced.json
 
-    ...
+Extract wikitext content
+
+    cat data/processed/bulbapedia_gen_i_sample_reduced.json | jq -r '.content' > data/processed/bulbapedia_gen_i_sample_content.txt
+
+### Wikitext processing
+
+    See `scripts/parse_wikitext.py` which uses [wikitextparser](https://github.com/5j9/wikitextparser)
 
