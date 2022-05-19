@@ -16,14 +16,12 @@ for line in fileinput.input():
 wikicode = mwp.parse(doc,skip_style_tags=True)
 
 # Define names of the sections of interest
-# (in a manner to approximate `qw` in Perl)
-want_sections = list(map(str.strip, '''
-    Trivia
-    Origin
-    Name origin
-    In other languages
-'''.split('\n')[1:-1]
-))
+want_sections = [
+    'Trivia',
+    'Origin',
+    'Name origin',
+    'In other languages',
+]
 if debug: print("wanted: "); pp.pp(want_sections)
 
 # Extract the wikitext for each section
